@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Tạo project react
+# npx create-react-app my-project
+# tên project ko viết hoa
+
+## chạy react
+# npm start
+
+## Cấu trúc thư mục
+# node_modules: chứa package cài đặt của project (ko push thư mục này lên git (đã dc mặc định bỏ đi trong .gitignore))
+# => khi clone hoặc down code từ github, chạy lệnh npm i (để cài lại thư mục node_modules)
+# nội dung dc cài lại dựa theo thư mục package
+
+## public
+# thư mục chứa file index.html và img
+
+## src
+# nơi chứa các components của project
