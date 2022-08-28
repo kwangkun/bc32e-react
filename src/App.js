@@ -1,9 +1,12 @@
 // Các property/Attributes sẽ dc viết theo quy tắc camelCase
 // class => className
 
-import BaiTapThucHanhLayout from "./components/baiTap/baiTapThucHanhLayoutBuoi1/BaiTapThucHanhLayout";
-import Parent from "./components/props/Parent";
+import BTREACTBuoi2 from "./components/baiTap/baiTapREACTBuoi2/BTREACTBuoi2";
+import BTPhone from "./components/BTPhone/BTPhone";
 
+// import BTShoesShop from "./components/BTShoesShop/BTShoesShop";
+// import Parent from "./components/props/Parent";
+// import BaiTapThucHanhLayout from "./components/baiTap/baiTapThucHanhLayoutBuoi1/BaiTapThucHanhLayout";
 // import BaiTapMovies from "./components/baiTapMovies/BaiTapMovies";
 // import BaiTapChonXe from "./components/baiTapXe/BaiTapChonXe";
 // import State from "./components/State/State";
@@ -54,10 +57,19 @@ function App() {
       {/* <BaiTapMovies /> */}
 
       {/* Bài Tập Thực Hành Layout Buổi 1 */}
-      <BaiTapThucHanhLayout />
+      {/* <BaiTapThucHanhLayout /> */}
 
       {/* Props */}
       {/* <Parent /> */}
+
+      {/* BTShoesShop */}
+      {/* <BTShoesShop /> */}
+
+      {/* Bài tập chọn kính */}
+      <BTREACTBuoi2 />
+
+      {/* BTPhone */}
+      {/* <BTPhone/> */}
     </div>
   )
 }

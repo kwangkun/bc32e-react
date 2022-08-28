@@ -86,3 +86,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## src
 # nơi chứa các components của project
+
+### So sánh giữa props và state
+
+## Giống nhau: 
+# + Đều là thuộc tính có sẵn của class component
+# + Đều dùng để lưu trữ dữ liệu component
+## Khác nhau:
+
+# +++ Props:
+# + Là dữ liệu dc truyền từ component cha xuống component con 
+# + Ko thể thay đổi trong quá trình truyền (ko thay đổi ở component nhận props)
+# + Thay đổi khi component truyền props (comp cha) render lại và thay đổi giá trị
+
+# +++ State:
+# + Dc định nghĩa sẵn trong chính component đó
+# + Có thể thay đổi trong quá trình thực thi của component
+# + Chỉ thay đổi dc thông qua method setState() (mỗi lần resetState thì component render lại)
