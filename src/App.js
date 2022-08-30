@@ -1,12 +1,20 @@
 // Các property/Attributes sẽ dc viết theo quy tắc camelCase
 // class => className
 
-import BTREACTBuoi2 from "./components/baiTap/baiTapREACTBuoi2/BTREACTBuoi2";
+
 import BTPhone from "./components/BTPhone/BTPhone";
+
+
+// ---------------------------------------------- IMPORT BÀI TẬP NỘP ----------------------------------------------
+
+// import BaiTapThucHanhLayout from "./components/baiTap/baiTapThucHanhLayoutBuoi1/BaiTapThucHanhLayout"; // Bài tập 1
+// import BTREACTBuoi2 from "./components/baiTap/baiTapREACTBuoi2/BTREACTBuoi2"; // Bài tập 2
+import BTREACTReCodeShoesShop from "./components/baiTap/baiTapREACT-ShoesShop/BTREACTReCodeShoesShop"; // Bài tập 3
+
+// ---------------------------------------------- IMPORT BÀI TẬP NỘP ----------------------------------------------
 
 // import BTShoesShop from "./components/BTShoesShop/BTShoesShop";
 // import Parent from "./components/props/Parent";
-// import BaiTapThucHanhLayout from "./components/baiTap/baiTapThucHanhLayoutBuoi1/BaiTapThucHanhLayout";
 // import BaiTapMovies from "./components/baiTapMovies/BaiTapMovies";
 // import BaiTapChonXe from "./components/baiTapXe/BaiTapChonXe";
 // import State from "./components/State/State";
@@ -66,10 +74,13 @@ function App() {
       {/* <BTShoesShop /> */}
 
       {/* Bài tập chọn kính */}
-      <BTREACTBuoi2 />
+      {/* <BTREACTBuoi2 /> */}
+
+      {/* Bài tập REACT re-code Shoes Shop */}
+      <BTREACTReCodeShoesShop />
 
       {/* BTPhone */}
-      {/* <BTPhone/> */}
+      {/* <BTPhone /> */}
     </div>
   )
 }

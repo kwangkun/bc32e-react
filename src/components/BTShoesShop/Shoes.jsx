@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Shoes extends Component {
     render() {
         console.log(this.props.product)
-        const {product} = this.props
+        const { product } = this.props
 
         return (
             <div>
