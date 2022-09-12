@@ -25,12 +25,19 @@ class Phone extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        propsFunction: (prodDetails)=>{
-            dispatch ({
+        propsFunction: (prodDetails) => {
+            dispatch({
                 type: 'CHANGE_PRODUCT_SELECTED',
                 payload: prodDetails,
             })
-        }
+        },
+
+        funcHandleCart: (prod) => {
+            dispatch({
+                type: 'ADD_TO_CART',
+                payload: prod,
+            })
+        },
     }
 }
 

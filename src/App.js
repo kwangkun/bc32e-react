@@ -9,6 +9,7 @@ import BaiTapPhoneRedux from "./components/DemoRedux/BaiTapPhoneRedux/BaiTapPhon
 // import BTREACTBuoi2 from "./components/baiTap/baiTapREACTBuoi2/BTREACTBuoi2"; // Bài tập 2
 // import BTREACTReCodeShoesShop from "./components/baiTap/baiTapREACT-ShoesShop/BTREACTReCodeShoesShop"; // Bài tập 3
 import BaiTapREACTDatVeXemPhim from "./components/baiTap/baiTapREACTDatVeXemPhim/BaiTapREACTDatVeXemPhim";
+import BaiTapXucXac from "./components/DemoRedux/BaiTapXucXac/BaiTapXucXac";
 
 // ---------------------------------------------- IMPORT BÀI TẬP NỘP ----------------------------------------------
 
@@ -82,7 +83,10 @@ function App() {
       {/* <BaiTapChonXeRedux /> */}
 
       {/* Bài tập phone Redux */}
-      <BaiTapPhoneRedux />
+      {/* <BaiTapPhoneRedux /> */}
+
+      {/* Bài tập xúc xắc */}
+      {/* <BaiTapXucXac /> */}
 
       {/* ---------------------------------------------- BÀI TẬP NỘP ---------------------------------------------- */}
 
@@ -96,7 +100,7 @@ function App() {
       {/* <BTREACTReCodeShoesShop /> */}
 
       {/* Bài tập REACT đặt vé xem phim */}
-      {/* <BaiTapREACTDatVeXemPhim /> */}
+      <BaiTapREACTDatVeXemPhim />
 
       {/* ---------------------------------------------- BÀI TẬP NỘP ---------------------------------------------- */}
     </div>
