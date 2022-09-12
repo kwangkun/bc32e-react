@@ -20,19 +20,19 @@ export default class BTPhone extends Component {
         },
 
         cart: [
-            {
-                maSP: 1,
-                tenSP: "VinSmart Live",
-                manHinh: "AMOLED, 6.2, Full HD+",
-                heDieuHanh: "Android 9.0 (Pie)",
-                cameraTruoc: "20 MP",
-                cameraSau: "Chính 48 MP & Phụ 8 MP, 5 MP",
-                ram: "4 GB",
-                rom: "64 GB",
-                giaBan: 5700000,
-                hinhAnh: "./images/BTPhone/img-BTPhone/vsphone.jpg",
-                soLuong: 1,
-            },
+            // {
+            //     maSP: 1,
+            //     tenSP: "VinSmart Live",
+            //     manHinh: "AMOLED, 6.2, Full HD+",
+            //     heDieuHanh: "Android 9.0 (Pie)",
+            //     cameraTruoc: "20 MP",
+            //     cameraSau: "Chính 48 MP & Phụ 8 MP, 5 MP",
+            //     ram: "4 GB",
+            //     rom: "64 GB",
+            //     giaBan: 5700000,
+            //     hinhAnh: "./images/BTPhone/img-BTPhone/vsphone.jpg",
+            //     soLuong: 1,
+            // },
         ],
     }
 
@@ -61,12 +61,46 @@ export default class BTPhone extends Component {
         })
     }
 
+    handleRemoveCart = (maSP) => {
+        // console.log(maSP)
+        // const duLieu = this.state.cart.filter((item) => {
+        //     return item.maSP !== maSP
+        // })
+
+        const duLieu = this.state.cart.filter((item) => item.maSP !== maSP)
+
+        this.setState({
+            cart: duLieu,
+        })
+    }
+
+    handleQuantity = (maSP, quant) => {
+        // console.log(maSP);
+        // console.log('quant:', quant);
+
+        const duLieu = [...this.state.cart]
+
+        // findIndex
+        const index = duLieu.findIndex((sanPham) => sanPham.maSP === maSP)
+
+        // duLieu[index].soLuong += quant
+        if (duLieu[index].soLuong > 1 || quant > 0) {
+            duLieu[index].soLuong += quant
+        } else if (window.confirm('Bạn có muốn xóa sản phẩm này không?')) {
+            duLieu.splice(index, 1)
+        }
+
+        this.setState({
+            cart: duLieu,
+        })
+    }
+
     render() {
         return (
             <div>
                 <div className="container mb-5">
                     {/* Giỏ Hàng */}
-                    <GioHang cart={this.state.cart} />
+                    <GioHang cart={this.state.cart} handleRemoveCart={this.handleRemoveCart} handleQuantity={this.handleQuantity} />
 
                     {/* Danh Sách SP */}
                     <div className="row mt-3">

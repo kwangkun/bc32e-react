@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 export default class GioHang extends Component {
     render() {
         const { cart } = this.props
+        const { handleRemoveCart } = this.props
+        const { handleQuantity } = this.props
 
         const renderCart = () => {
             return (
@@ -16,16 +18,20 @@ export default class GioHang extends Component {
                             </td>
                             <td>{item.giaBan.toLocaleString()} VND</td>
                             <td>
-                                <button className='btn btn-danger'>-</button>
+                                <button className='btn btn-danger' onClick={() => { handleQuantity(item.maSP, -1) }}>-</button>
                                 <span className='mx-2'>{item.soLuong}</span>
-                                <button className='btn btn-success'>+</button>
+                                <button className='btn btn-success' onClick={() => { handleQuantity(item.maSP, 1) }}>+</button>
                             </td>
                             <td>{(item.giaBan * item.soLuong).toLocaleString()} VND</td>
-                        </tr>
+                            <td>
+                                <button className='btn btn-danger' onClick={() => { handleRemoveCart(item.maSP) }}> Xóa</button>
+                            </td>
+                        </tr >
                     )
                 })
             )
         }
+
         return (
             <div>
                 <div>
@@ -33,6 +39,13 @@ export default class GioHang extends Component {
                         <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                             <i className="fa-solid fa-cart-arrow-down"></i>
                             Giỏ hàng
+                            <span className='ml-3'>
+                                ({cart.length} - {' '}
+                                {cart.reduce((tong, item) => {
+                                    return (tong += item.soLuong * item.giaBan)
+                                }, 0).toLocaleString()} VNĐ
+                                )
+                            </span>
                         </button>
                     </div>
 
@@ -41,6 +54,7 @@ export default class GioHang extends Component {
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title" id="exampleModalLabel">Giỏ Hàng</h5>
+
                                     <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">x</span>
                                     </button>

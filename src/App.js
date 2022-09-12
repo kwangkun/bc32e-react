@@ -1,18 +1,20 @@
 // Các property/Attributes sẽ dc viết theo quy tắc camelCase
 // class => className
 
-
-import BTPhone from "./components/BTPhone/BTPhone";
-
+import BaiTapPhoneRedux from "./components/DemoRedux/BaiTapPhoneRedux/BaiTapPhoneRedux";
 
 // ---------------------------------------------- IMPORT BÀI TẬP NỘP ----------------------------------------------
 
 // import BaiTapThucHanhLayout from "./components/baiTap/baiTapThucHanhLayoutBuoi1/BaiTapThucHanhLayout"; // Bài tập 1
 // import BTREACTBuoi2 from "./components/baiTap/baiTapREACTBuoi2/BTREACTBuoi2"; // Bài tập 2
-import BTREACTReCodeShoesShop from "./components/baiTap/baiTapREACT-ShoesShop/BTREACTReCodeShoesShop"; // Bài tập 3
+// import BTREACTReCodeShoesShop from "./components/baiTap/baiTapREACT-ShoesShop/BTREACTReCodeShoesShop"; // Bài tập 3
+import BaiTapREACTDatVeXemPhim from "./components/baiTap/baiTapREACTDatVeXemPhim/BaiTapREACTDatVeXemPhim";
 
 // ---------------------------------------------- IMPORT BÀI TẬP NỘP ----------------------------------------------
 
+// import BaiTapChonXeRedux from "./components/DemoRedux/BaiTapChonXeRedux";
+// import DemoRedux from "./components/DemoRedux/DemoRedux";
+// import BTPhone from "./components/BTPhone/BTPhone"; 
 // import BTShoesShop from "./components/BTShoesShop/BTShoesShop";
 // import Parent from "./components/props/Parent";
 // import BaiTapMovies from "./components/baiTapMovies/BaiTapMovies";
@@ -64,23 +66,39 @@ function App() {
       {/* Bài tập Movies */}
       {/* <BaiTapMovies /> */}
 
-      {/* Bài Tập Thực Hành Layout Buổi 1 */}
-      {/* <BaiTapThucHanhLayout /> */}
-
       {/* Props */}
       {/* <Parent /> */}
 
       {/* BTShoesShop */}
       {/* <BTShoesShop /> */}
 
+      {/* BTPhone */}
+      {/* <BTPhone /> */}
+
+      {/* Demo Redux */}
+      {/* <DemoRedux /> */}
+
+      {/* Bài tập chọn xe Redux */}
+      {/* <BaiTapChonXeRedux /> */}
+
+      {/* Bài tập phone Redux */}
+      <BaiTapPhoneRedux />
+
+      {/* ---------------------------------------------- BÀI TẬP NỘP ---------------------------------------------- */}
+
+      {/* Bài Tập Thực Hành Layout Buổi 1 */}
+      {/* <BaiTapThucHanhLayout /> */}
+
       {/* Bài tập chọn kính */}
       {/* <BTREACTBuoi2 /> */}
 
       {/* Bài tập REACT re-code Shoes Shop */}
-      <BTREACTReCodeShoesShop />
+      {/* <BTREACTReCodeShoesShop /> */}
 
-      {/* BTPhone */}
-      {/* <BTPhone /> */}
+      {/* Bài tập REACT đặt vé xem phim */}
+      {/* <BaiTapREACTDatVeXemPhim /> */}
+
+      {/* ---------------------------------------------- BÀI TẬP NỘP ---------------------------------------------- */}
     </div>
   )
 }
