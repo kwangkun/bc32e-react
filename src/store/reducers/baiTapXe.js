@@ -1,7 +1,7 @@
 const stateDefault = './images/products/black-car.jpg'
 
 export const baiTapXe = (state = stateDefault, action) => {
-    console.log(action);
+    // console.log(action);
     switch (action.type) {
         case 'CHANGE_COLOR': {
             state = `./images/products/${action.payload}-car.jpg`
